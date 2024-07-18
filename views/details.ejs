@@ -1,0 +1,19 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="h-[90vh] bg-zinc-950 flex">
+    <div class="w-1/2 h-full flex items-center justify-center ">
+        <img src="<%=bookDetails.bookPoster%>"
+            class="rounded-xl ml-5 w-1/2" alt="">
+    </div>
+    <form action="" class="w-1/2 h-full px-14 py-10">
+        <h1 class="text-white text-5xl text-center">Book details</h1>
+        <h1 class="text-zinc-300 text-5xl font-bold mt-10 tracking-wider"><%=bookDetails.bookName%></h1>
+        <h1 class="text-zinc-500 text-xl mt-2 tracking-wider">By <%=bookDetails.authorName%></h1>
+        <p class="text-zinc-400 text-xl my-10 tracking-tight"><%=bookDetails.description%></p>
+        <h1 class="text-white text-2xl mt-12 tracking-tight">ISBN : <%=bookDetails.isbnNumber%></h1>
+        <h1 class="text-green-400 text-4xl my-10"><%=bookDetails.bookPrice%></h1>
+        <a href="/update-book/<%=bookDetails._id%>" class="bg-green-600 hover:bg-green-700 px-3 py-2 text-white rounded mr-5">Update Book</a>
+        <a href="/delete-book/<%=bookDetails._id%>" class="bg-red-600 hover:bg-red-700 px-3 py-2 text-white rounded">Delete Book</a>
+    </form>
+</div>
+<%-include("partials/footer")%>

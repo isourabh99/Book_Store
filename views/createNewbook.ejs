@@ -1,0 +1,23 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="min-h-[90vh] bg-zinc-950 flex items-center justify-center py-4">
+  <form action="/create-new-book" class="w-1/2 h-full px-10 " method="post">
+    <h1 class="text-white text-4xl text-center">Register New Book</h1>
+    <input type="url" name="bookPoster" id="" placeholder="Poster URL"
+      class="w-full my-4 px-2 py-2 bg-zinc-900 rounded text-white text-xl">
+    <input type="text" name="bookName" id="" placeholder="Title"
+      class="w-full my-4 px-2 py-2 bg-zinc-900 rounded text-white text-xl">
+    <input type="text" name="authorName" placeholder="Author's Name"
+      class="w-full my-4 px-2 py-2 bg-zinc-900 rounded text-white text-xl">
+    <input type="text" name="isbnNumber" id="" placeholder="ISBN NUMBER"
+      class="w-full my-4 px-2 py-2 bg-zinc-900 rounded text-white text-xl">
+    <input type="number" name="bookPrice" id="" placeholder="Book price"
+      class="w-full my-4 px-2 py-2 bg-zinc-900 rounded text-white text-xl">
+    <textarea name="description" id=""
+      class="w-full h-[30vh] my-6 px-2 py-2 bg-zinc-900 rounded text-white text-xl resize-none"
+      placeholder="Description....(maximum 100 characters)"></textarea>
+   
+    <button class="bg-green-600 hover:bg-green-700 px-3 py-2 text-white rounded">Add to Library</button>
+  </form>
+</div>
+<%-include("partials/footer")%>
